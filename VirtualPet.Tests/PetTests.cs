@@ -67,35 +67,35 @@ namespace VirtualPet.Tests
         [Fact]
         public void GetSpecies_Should_Get_Pet_Species_Value()
         {
-            // testPet.SetSpecies("Dog");
+            testPet.SetSpecies("Dog");
 
-            // string testPetSpecies = testPet.GetSpecies();
+            string testPetSpecies = testPet.GetSpecies();
 
-            // Assert.Equal("Dog", testPetSpecies);
+            Assert.Equal("Dog", testPetSpecies);
         }
 
         [Fact]
         public void Pet_Should_Have_Hunger()
         {
-            // testPet.Hunger = 100;
-            
-            // Assert.Equal(100, testPet.Hunger);
+            testPet.Hunger = 100;
+
+            Assert.Equal(100, testPet.Hunger);
         }
 
         [Fact]
         public void GetHunger_Should_Return_Initial_Hunger_Level_Of_50()
         {
-            // int testPetHunger = testPet.GetHunger();
+            int testPetHunger = testPet.GetHunger();
 
-            // Assert.Equal(50, testPetHunger);
+            Assert.Equal(50, testPetHunger);
         }
 
         [Fact]
         public void Pet_Should_Have_Boredom()
         {
-            // testPet.Boredom = 100;
-            
-            // Assert.Equal(100, testPet.Boredom);
+            testPet.Boredom = 100;
+
+            Assert.Equal(100, testPet.Boredom);
         }
 
         [Fact]
