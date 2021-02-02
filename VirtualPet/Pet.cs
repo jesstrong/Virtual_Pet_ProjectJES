@@ -78,14 +78,6 @@ namespace VirtualPet
             Hunger += 5;
             Boredom += 5;
             Health -= 5;
-
-        }
-
-        public void Tick()
-        {
-            Hunger += 5;
-            Boredom += 5;
-            Health -= 5;
         }
     }
 
