@@ -36,6 +36,25 @@ namespace VirtualPet.Tests
 
             //Assert
             Assert.Equal("Horace", testPet.Name);
+            
+        }
+
+        [Fact]
+        public void Health_Of_New_Pet_Is_70() 
+        {
+            // Arrange
+
+
+            // Act
+
+
+            // Assert
+            Assert.Equal(70, testPet.Health);
+
+
+
+
+
         }
     }
 }

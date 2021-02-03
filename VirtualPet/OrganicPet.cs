@@ -6,7 +6,13 @@ namespace VirtualPet
 {
     public class OrganicPet : Pet
     {
+        public OrganicPet()
+        {
+            Hunger = 50;
+            Health = 70;
+            Cleanliness = 30; 
 
+        }
         public int Hunger { get; set; }
         public int Health { get; set; }
         public int Cleanliness { get; set; }
