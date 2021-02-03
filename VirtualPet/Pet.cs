@@ -62,9 +62,10 @@ namespace VirtualPet
             Hunger -= 40;
         }
 
-        public void SeeDoctor()
+        public void GiveHeadPats()
         {
-            Health += 30;
+            Boredom -= 10;
+            Health += 10;
         }
 
         public void Play()
@@ -79,6 +80,12 @@ namespace VirtualPet
             Boredom += 5;
             Health -= 5;
         }
+
+
+
+
+
+
     }
 
 }

@@ -36,7 +36,7 @@ namespace VirtualPet
                 Console.WriteLine("\nWhat do you want to do with " + userPet.GetName());
                 Console.WriteLine("1. Feed");
                 Console.WriteLine("2. Play");
-                Console.WriteLine("3. See doctor?");
+                Console.WriteLine("3. Give head pats!");
                 Console.WriteLine("4. Exit");
 
                 string userChoice = Console.ReadLine();
@@ -52,8 +52,8 @@ namespace VirtualPet
                         userPet.Play();
                         break;
                     case "3":
-                        Console.WriteLine(userPet.GetName() + " feels alot better now");
-                        userPet.SeeDoctor();
+                        Console.WriteLine(userPet.GetName() + " feels better now");
+                        userPet.GiveHeadPats();
                         break;
                     case "4":
                         Console.WriteLine("Thank you for playing!");
@@ -66,6 +66,7 @@ namespace VirtualPet
 
                 Console.WriteLine("Press any key to continue.");
                 Console.ReadKey();
+                userPet.Tick();
                 Console.Clear();
 
 
