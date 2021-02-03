@@ -26,14 +26,17 @@ namespace VirtualPet
 
             while (keepPlaying) 
             {
-                Console.WriteLine("What do you want to do with " + userPet.GetName());
+                Console.WriteLine("\n" + userPet.GetName() + " the " + userPet.GetSpecies() + "'s stats:");
+                Console.WriteLine("\nHunger level: " + userPet.GetHunger());
+                Console.WriteLine("Boredom level: " + userPet.GetBoredom());
+                Console.WriteLine("Health level: " + userPet.GetHealth());
+                
 
+                
+                Console.WriteLine("\nWhat do you want to do with " + userPet.GetName());
                 Console.WriteLine("1. Feed");
-
                 Console.WriteLine("2. Play");
-
                 Console.WriteLine("3. See doctor?");
-
                 Console.WriteLine("4. Exit");
 
                 string userChoice = Console.ReadLine();
@@ -59,10 +62,11 @@ namespace VirtualPet
                     default:
                         Console.WriteLine("You have angered Horace. Please choose a proper option!");
                         break; 
-                        
                 }
 
-
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
+                Console.Clear();
 
 
 
