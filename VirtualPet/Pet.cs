@@ -9,6 +9,7 @@ namespace VirtualPet
         // Constructors
         public Pet()
         {
+            Boredom = 60;
         }
 
         //Properties
@@ -45,6 +46,11 @@ namespace VirtualPet
         }
 
         public virtual void GiveHeadPats()
+        {
+            Boredom -= 10;
+        }
+
+        public virtual void Play()
         {
         }
 

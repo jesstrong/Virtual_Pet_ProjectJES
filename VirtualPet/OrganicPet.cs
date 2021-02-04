@@ -32,7 +32,7 @@ namespace VirtualPet
             Hunger -= 40;
         }
 
-        public void Play()
+        public override void Play()
         {
             Hunger += 10;
             Boredom -= 20;
@@ -42,6 +42,7 @@ namespace VirtualPet
         public override void GiveHeadPats()
         {
             Boredom -= 10;
+            Health += 10;
         }
     }
 }
