@@ -27,9 +27,9 @@ namespace VirtualPet
             while (keepPlaying) 
             {
                 Console.WriteLine("\n" + userPet.GetName() + " the " + userPet.GetSpecies() + "'s stats:");
-                Console.WriteLine("\nHunger level: " + userPet.GetHunger());
+                //Console.WriteLine("\nHunger level: " + userPet.GetHunger());
                 Console.WriteLine("Boredom level: " + userPet.GetBoredom());
-                Console.WriteLine("Health level: " + userPet.GetHealth());
+                //Console.WriteLine("Health level: " + userPet.GetHealth());
                 
 
                 
@@ -44,12 +44,12 @@ namespace VirtualPet
                 switch (userChoice)
                 {
                     case "1":
-                        Console.WriteLine("You fed " + userPet.GetName());
-                        userPet.Feed();
+                        //Console.WriteLine("You fed " + userPet.GetName());
+                        //userPet.Feed();
                         break;
                     case "2":
-                        Console.WriteLine("You played with " + userPet.GetName());
-                        userPet.Play();
+                        //Console.WriteLine("You played with " + userPet.GetName());
+                        //userPet.Play();
                         break;
                     case "3":
                         Console.WriteLine(userPet.GetName() + " feels better now");
