@@ -6,7 +6,8 @@ namespace VirtualPet
     {
         static void Main(string[] args)
         {
-            Pet userPet = new Pet();
+            OrganicPet userPet = new OrganicPet();
+            //The above is for an organic pet, not robotic.
             
             Console.WriteLine("Hello! Welcome to Virtual Pets!");
 
@@ -27,12 +28,12 @@ namespace VirtualPet
             while (keepPlaying) 
             {
                 Console.WriteLine("\n" + userPet.GetName() + " the " + userPet.GetSpecies() + "'s stats:");
-                //Console.WriteLine("\nHunger level: " + userPet.GetHunger());
+                Console.WriteLine("\nHunger level: " + userPet.GetHunger());
                 Console.WriteLine("Boredom level: " + userPet.GetBoredom());
-                //Console.WriteLine("Health level: " + userPet.GetHealth());
-                
+                Console.WriteLine("Health level: " + userPet.GetHealth());
 
-                
+
+
                 Console.WriteLine("\nWhat do you want to do with " + userPet.GetName());
                 Console.WriteLine("1. Feed");
                 Console.WriteLine("2. Play");
@@ -44,12 +45,12 @@ namespace VirtualPet
                 switch (userChoice)
                 {
                     case "1":
-                        //Console.WriteLine("You fed " + userPet.GetName());
-                        //userPet.Feed();
+                        Console.WriteLine("You fed " + userPet.GetName());
+                        userPet.Feed();
                         break;
                     case "2":
-                        //Console.WriteLine("You played with " + userPet.GetName());
-                        //userPet.Play();
+                        Console.WriteLine("You played with " + userPet.GetName());
+                        userPet.Play();
                         break;
                     case "3":
                         Console.WriteLine(userPet.GetName() + " feels better now");
