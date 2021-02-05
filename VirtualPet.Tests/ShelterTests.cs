@@ -25,18 +25,19 @@ namespace VirtualPet.Tests
             //Assert
             Assert.Single(testShelter.ListOfPets);
         }
-        [Fact]
-        public void SelectPet_Should_Allow_User_To_Pick_Pet_From_Shelter()
-        {
-            //Arrange
-            testShelter.ListOfPets.Clear();
-            Pet pet1 = new Pet();
-            Pet pet2 = new Pet();
-            testShelter.AddPet(pet1);
-            testShelter.AddPet(pet2);
-            //Act
-            //Assert
-            Assert.Equal(pet2, testShelter.ListOfPets[1]);
+        //[Fact]    GRAVEYARD
+        //public void SelectPet_Should_Allow_User_To_Pick_Pet_From_Shelter()
+        //{
+        //    //Arrange
+        //    testShelter.ListOfPets.Clear();
+        //    Pet pet1 = new Pet();
+        //    Pet pet2 = new Pet();
+        //    testShelter.AddPet(pet1);
+        //    testShelter.AddPet(pet2);
+        //    //Act
+        //    testShelter.SelectPet(1);
+        //    //Assert
+        //    Assert.Equal(pet1, );
 
         }
     }
