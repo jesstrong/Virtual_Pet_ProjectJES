@@ -47,6 +47,7 @@ namespace VirtualPet
 
         public virtual void GiveHeadPats()
         {
+            Boredom -= 10; 
         }
 
         public virtual void Play()

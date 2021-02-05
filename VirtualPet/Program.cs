@@ -29,15 +29,15 @@ namespace VirtualPet
             {
                 Console.WriteLine("1. Adopt a new organic pet.");
                 Console.WriteLine("2. Create a new robotic pet.");
-                Console.WriteLine("3. Check status of organic pets");
-                Console.WriteLine("4. Check status of robotic pets.");
-                Console.WriteLine("5. Give head pats.");
-                Console.WriteLine("6. Play with pet.");
-                Console.WriteLine("7. Give organic pet a bath.");
-                Console.WriteLine("8. Feed organic pet.");
-                Console.WriteLine("9. Charge robotic pet.");
-                Console.WriteLine("10. Take robotic pet to shop for maintenance.");
-                Console.WriteLine("11. Update robotic pet's software.");
+                Console.WriteLine("3. Check boredom status of pets.");
+                Console.WriteLine("4. Give head pats to organic pets.");
+                //Console.WriteLine("5. Give head pats.");
+                //Console.WriteLine("6. Play with pet.");
+                //Console.WriteLine("7. Give organic pet a bath.");
+                //Console.WriteLine("8. Feed organic pet.");
+                //Console.WriteLine("9. Charge robotic pet.");
+                //Console.WriteLine("10. Take robotic pet to shop for maintenance.");
+                //Console.WriteLine("11. Update robotic pet's software.");
 
                 string userChoice = Console.ReadLine();
 
@@ -45,46 +45,48 @@ namespace VirtualPet
                 {
                     case "1":
                         Console.WriteLine("What is the name of your pet?");
-                        string petName = Console.ReadLine();
+                        string organicPet = Console.ReadLine();
                         Console.WriteLine("What type of pet do you want?");
                         string petType = Console.ReadLine();
-                        myPet = new OrganicPet(petName, petType);
+                        myPet = new OrganicPet(organicPet, petType);
                         myShelter.AddPet(myPet);
                         break;
 
                     case "2":
                         Console.WriteLine("What is the name of your robotic pet?");
-                        petName = Console.ReadLine();
+                        string roboticPet = Console.ReadLine();
                         Console.WriteLine("What type of robotic pet do you want?");
                         petType = Console.ReadLine();
-                        myPet = new RoboticPet(petName, petType);
+                        myPet = new RoboticPet(roboticPet, petType);
                         myShelter.AddPet(myPet);
                         break;
 
                     case "3":
                         foreach (Pet pet in myShelter.ListOfPets)
                         {
-                            Console.WriteLine($"\n{myPet.GetName()} to {myPet.GetSpecies()} status");
+                            Console.WriteLine($"\n{pet.GetName()} the {pet.GetSpecies()} status");
                             //Console.WriteLine($"Hunger Level: {pet.GetHunger()}");
                             Console.WriteLine($"Boredom Level: {pet.GetBoredom()}");
                             //Console.WriteLine($"Health Level: {pet.GetHealth()}");
                         }
                         break;
 
-                    case "4":    
-                        foreach (RoboticPet pet in myShelter.ListOfPets)
-                        {
-                            Console.WriteLine($"\n{myPet.GetName()} to {myPet.GetSpecies()} status");
-                            Console.WriteLine($"Battery Level: {pet.GetBatteryCharge()}");
-                            Console.WriteLine($"Wear and Tear Level: {pet.GetWearAndTear()}");
-                            Console.WriteLine($"Software Up to Date: {pet.GetSoftware()}");
-                        }
+                    case "4":
+                        myPet = myShelter.SelectPet();
+                        myPet.GiveHeadPats();
+                        Console.WriteLine($"You pet {myPet.Name}.");
                         break;
+
                 }
 
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
+                myPet.Tick();
+                Console.Clear();
 
 
-                    
+
+
 
 
                 //Console.WriteLine("\n" + userPet.GetName() + " the " + userPet.GetSpecies() + "'s stats:");
@@ -125,11 +127,6 @@ namespace VirtualPet
                 //        break; 
 
             }
-
-                Console.WriteLine("Press any key to continue.");
-                Console.ReadKey();
-                myPet.Tick();
-                Console.Clear();
 
 
 

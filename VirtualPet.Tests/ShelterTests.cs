@@ -39,6 +39,6 @@ namespace VirtualPet.Tests
         //    //Assert
         //    Assert.Equal(pet1, );
 
-        }
+        
     }
 }

@@ -26,7 +26,7 @@ namespace VirtualPet
             }
             int indexSelected = Convert.ToInt32(Console.ReadLine());
 
-            return ListOfPets[indexSelected];
+            return ListOfPets[indexSelected - 1];
         }
 
     }
