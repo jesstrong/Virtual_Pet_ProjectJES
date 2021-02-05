@@ -43,9 +43,31 @@ namespace VirtualPet
         {
             Boredom -= 30;
             BatteryCharge -= 10;
-            WearAndTear += 10;
+            WearAndTear += 15;
         }
 
+        public void Charge()
+        {
+            BatteryCharge = 100;
+            Boredom -= 40;
+        }
 
+        public override void Tick()
+        {
+            BatteryCharge -= 5;
+            Boredom += 5;
+            Software -= 10;
+            WearAndTear += 5;
+        }
+
+        public void Maintenance()
+        {
+            WearAndTear = 0;
+        }
+
+        public void SoftwareUpdate()
+        {
+            Software = 100;
+        }
     }
 }

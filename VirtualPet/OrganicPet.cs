@@ -37,12 +37,26 @@ namespace VirtualPet
             Hunger += 10;
             Boredom -= 20;
             Health += 10;
+            Cleanliness += 10;
         }
 
         public override void GiveHeadPats()
         {
             Boredom -= 10;
             Health += 10;
+        }
+
+        public void GiveBath()
+        {
+            Cleanliness = 0;
+        }
+
+        public override void Tick()
+        {
+            Cleanliness += 5;
+            Boredom += 5;
+            Hunger += 5;
+            Health -= 5;
         }
     }
 }

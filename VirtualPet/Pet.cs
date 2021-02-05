@@ -53,7 +53,7 @@ namespace VirtualPet
         {
         }
 
-        public void Tick()
+        public virtual void Tick()
         {
         }
     }
