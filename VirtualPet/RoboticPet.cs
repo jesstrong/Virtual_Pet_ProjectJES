@@ -14,6 +14,15 @@ namespace VirtualPet
             Software = 100;
         }
 
+        public RoboticPet(string petName, string petType)
+        {
+            BatteryCharge = 100;
+            WearAndTear = 0;
+            Software = 100;
+            Name = petName;
+            Species = petType;
+        }
+
         public int BatteryCharge { get; set; }
         public int WearAndTear { get; set; }
         public int Software { get; set; }
